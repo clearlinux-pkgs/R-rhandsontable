@@ -4,7 +4,7 @@
 #
 Name     : R-rhandsontable
 Version  : 0.3.6
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/rhandsontable_0.3.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rhandsontable_0.3.6.tar.gz
 Summary  : Interface to the 'Handsontable.js' Library
