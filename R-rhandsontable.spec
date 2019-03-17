@@ -4,15 +4,14 @@
 #
 Name     : R-rhandsontable
 Version  : 0.3.7
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/rhandsontable_0.3.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rhandsontable_0.3.7.tar.gz
 Summary  : Interface to the 'Handsontable.js' Library
 Group    : Development/Tools
 License  : MIT
-Requires: R-htmlwidgets
-Requires: R-jsonlite
-Requires: R-webshot
+Requires: R-htmltools
+BuildRequires : R-htmltools
 BuildRequires : R-htmlwidgets
 BuildRequires : R-jsonlite
 BuildRequires : R-webshot
@@ -29,10 +28,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542703660
+export SOURCE_DATE_EPOCH=1552856500
 
 %install
-export SOURCE_DATE_EPOCH=1542703660
+export SOURCE_DATE_EPOCH=1552856500
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -68,8 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library rhandsontable|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  rhandsontable || :
 
 
 %files
