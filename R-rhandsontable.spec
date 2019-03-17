@@ -4,13 +4,12 @@
 #
 Name     : R-rhandsontable
 Version  : 0.3.7
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/rhandsontable_0.3.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rhandsontable_0.3.7.tar.gz
 Summary  : Interface to the 'Handsontable.js' Library
 Group    : Development/Tools
 License  : MIT
-Requires: R-htmltools
 BuildRequires : R-htmltools
 BuildRequires : R-htmlwidgets
 BuildRequires : R-jsonlite
@@ -28,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552856500
+export SOURCE_DATE_EPOCH=1552866882
 
 %install
-export SOURCE_DATE_EPOCH=1552856500
+export SOURCE_DATE_EPOCH=1552866882
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
