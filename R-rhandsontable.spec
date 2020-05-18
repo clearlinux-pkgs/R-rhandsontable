@@ -4,7 +4,7 @@
 #
 Name     : R-rhandsontable
 Version  : 0.3.7
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/rhandsontable_0.3.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rhandsontable_0.3.7.tar.gz
 Summary  : Interface to the 'Handsontable.js' Library
@@ -13,33 +13,34 @@ License  : MIT
 Requires: R-htmlwidgets
 Requires: R-jsonlite
 Requires: R-magrittr
+Requires: R-webshot
 BuildRequires : R-htmlwidgets
 BuildRequires : R-jsonlite
 BuildRequires : R-magrittr
 BuildRequires : R-webshot
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 No detailed description available
 
 %prep
 %setup -q -c -n rhandsontable
+cd %{_builddir}/rhandsontable
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571890416
+export SOURCE_DATE_EPOCH=1589770939
 
 %install
-export SOURCE_DATE_EPOCH=1571890416
+export SOURCE_DATE_EPOCH=1589770939
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
